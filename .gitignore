@@ -1,0 +1,23 @@
+# Data (too large for GitHub)
+*.csv
+*.sqlite
+*.duckdb
+*.tbl
+
+# Model files
+*.joblib
+*.pkl
+*.h5
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
