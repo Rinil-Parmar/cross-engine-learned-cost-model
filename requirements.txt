@@ -1,0 +1,8 @@
+duckdb
+pandas
+scikit-learn
+sqlparse
+tqdm
+matplotlib
+joblib
+huggingface_hub
