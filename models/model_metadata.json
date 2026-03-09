@@ -1,0 +1,37 @@
+{
+  "best_model": "RandomForest",
+  "feature_columns": [
+    "num_joins",
+    "has_subquery",
+    "num_conditions",
+    "has_groupby",
+    "has_orderby",
+    "has_having",
+    "has_limit",
+    "has_distinct",
+    "has_like",
+    "has_exists",
+    "has_case",
+    "num_aggregations",
+    "num_tables",
+    "query_length",
+    "num_select_cols",
+    "has_between",
+    "has_in",
+    "has_left_join",
+    "join_complexity",
+    "num_tokens",
+    "num_string_literals",
+    "num_numeric_literals",
+    "nesting_depth",
+    "has_string_func",
+    "has_arithmetic"
+  ],
+  "engines": [
+    "sqlite",
+    "duckdb"
+  ],
+  "training_samples": 892,
+  "val_accuracy": 0.9936,
+  "test_accuracy": 1.0
+}

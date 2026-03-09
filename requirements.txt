@@ -6,3 +6,4 @@ tqdm
 matplotlib
 joblib
 huggingface_hub
+seaborn>=0.12.0

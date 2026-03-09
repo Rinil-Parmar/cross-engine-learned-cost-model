@@ -1,0 +1,245 @@
+{
+  "LinearRegression": {
+    "training_time_sec": 0.023,
+    "train": {
+      "selection": {
+        "selection_accuracy": 0.932,
+        "correct": 685,
+        "total": 735,
+        "total_overhead_sec": 0.297615,
+        "avg_overhead_per_query_sec": 0.000405
+      },
+      "regression_sqlite": {
+        "mae": 0.133988,
+        "rmse": 0.383106,
+        "median_ae": 0.026495,
+        "r2": 0.9644,
+        "mape": 90.73
+      },
+      "regression_duckdb": {
+        "mae": 0.016093,
+        "rmse": 0.037123,
+        "median_ae": 0.004908,
+        "r2": 0.9475,
+        "mape": 19.75
+      }
+    },
+    "val": {
+      "selection": {
+        "selection_accuracy": 0.949,
+        "correct": 149,
+        "total": 157,
+        "total_overhead_sec": 0.026902,
+        "avg_overhead_per_query_sec": 0.000171
+      },
+      "regression_sqlite": {
+        "mae": 0.106669,
+        "rmse": 0.270512,
+        "median_ae": 0.026421,
+        "r2": 0.9831,
+        "mape": 95.07
+      },
+      "regression_duckdb": {
+        "mae": 0.014753,
+        "rmse": 0.038729,
+        "median_ae": 0.004326,
+        "r2": 0.9541,
+        "mape": 19.02
+      }
+    }
+  },
+  "Ridge": {
+    "training_time_sec": 0.012,
+    "train": {
+      "selection": {
+        "selection_accuracy": 0.8721,
+        "correct": 641,
+        "total": 735,
+        "total_overhead_sec": 1.846688,
+        "avg_overhead_per_query_sec": 0.002513
+      },
+      "regression_sqlite": {
+        "mae": 0.256993,
+        "rmse": 0.440919,
+        "median_ae": 0.174451,
+        "r2": 0.9528,
+        "mape": 2261.83
+      },
+      "regression_duckdb": {
+        "mae": 0.024902,
+        "rmse": 0.041645,
+        "median_ae": 0.01704,
+        "r2": 0.9339,
+        "mape": 134.05
+      }
+    },
+    "val": {
+      "selection": {
+        "selection_accuracy": 0.8599,
+        "correct": 135,
+        "total": 157,
+        "total_overhead_sec": 0.555214,
+        "avg_overhead_per_query_sec": 0.003536
+      },
+      "regression_sqlite": {
+        "mae": 0.234812,
+        "rmse": 0.328186,
+        "median_ae": 0.172224,
+        "r2": 0.9751,
+        "mape": 2660.17
+      },
+      "regression_duckdb": {
+        "mae": 0.024395,
+        "rmse": 0.044535,
+        "median_ae": 0.016962,
+        "r2": 0.9393,
+        "mape": 141.42
+      }
+    }
+  },
+  "RandomForest": {
+    "training_time_sec": 0.891,
+    "train": {
+      "selection": {
+        "selection_accuracy": 0.9932,
+        "correct": 730,
+        "total": 735,
+        "total_overhead_sec": 0.091304,
+        "avg_overhead_per_query_sec": 0.000124
+      },
+      "regression_sqlite": {
+        "mae": 0.124901,
+        "rmse": 0.350083,
+        "median_ae": 0.021386,
+        "r2": 0.9702,
+        "mape": 25.16
+      },
+      "regression_duckdb": {
+        "mae": 0.01513,
+        "rmse": 0.035151,
+        "median_ae": 0.004075,
+        "r2": 0.9529,
+        "mape": 18.67
+      }
+    },
+    "val": {
+      "selection": {
+        "selection_accuracy": 0.9936,
+        "correct": 156,
+        "total": 157,
+        "total_overhead_sec": 0.001231,
+        "avg_overhead_per_query_sec": 8e-06
+      },
+      "regression_sqlite": {
+        "mae": 0.121075,
+        "rmse": 0.352011,
+        "median_ae": 0.022233,
+        "r2": 0.9713,
+        "mape": 32.4
+      },
+      "regression_duckdb": {
+        "mae": 0.015564,
+        "rmse": 0.042355,
+        "median_ae": 0.003213,
+        "r2": 0.9451,
+        "mape": 21.16
+      }
+    }
+  },
+  "GradientBoosting": {
+    "training_time_sec": 0.836,
+    "train": {
+      "selection": {
+        "selection_accuracy": 0.9932,
+        "correct": 730,
+        "total": 735,
+        "total_overhead_sec": 0.091304,
+        "avg_overhead_per_query_sec": 0.000124
+      },
+      "regression_sqlite": {
+        "mae": 0.117671,
+        "rmse": 0.328742,
+        "median_ae": 0.020639,
+        "r2": 0.9738,
+        "mape": 24.93
+      },
+      "regression_duckdb": {
+        "mae": 0.014707,
+        "rmse": 0.034231,
+        "median_ae": 0.004114,
+        "r2": 0.9553,
+        "mape": 18.37
+      }
+    },
+    "val": {
+      "selection": {
+        "selection_accuracy": 0.9936,
+        "correct": 156,
+        "total": 157,
+        "total_overhead_sec": 0.001231,
+        "avg_overhead_per_query_sec": 8e-06
+      },
+      "regression_sqlite": {
+        "mae": 0.129567,
+        "rmse": 0.380517,
+        "median_ae": 0.02022,
+        "r2": 0.9665,
+        "mape": 32.33
+      },
+      "regression_duckdb": {
+        "mae": 0.015866,
+        "rmse": 0.042849,
+        "median_ae": 0.003129,
+        "r2": 0.9438,
+        "mape": 21.05
+      }
+    }
+  },
+  "test": {
+    "best_model": "RandomForest",
+    "selection": {
+      "selection_accuracy": 1.0,
+      "correct": 158,
+      "total": 158,
+      "total_overhead_sec": 0.0,
+      "avg_overhead_per_query_sec": 0.0
+    },
+    "regression_sqlite": {
+      "mae": 0.112831,
+      "rmse": 0.369308,
+      "median_ae": 0.019521,
+      "r2": 0.9751,
+      "mape": 28.48
+    },
+    "regression_duckdb": {
+      "mae": 0.016761,
+      "rmse": 0.039929,
+      "median_ae": 0.004108,
+      "r2": 0.9578,
+      "mape": 19.04
+    }
+  },
+  "baselines": {
+    "always_sqlite": {
+      "total_time_sec": 193.93,
+      "accuracy": 0.1392
+    },
+    "always_duckdb": {
+      "total_time_sec": 15.2531,
+      "accuracy": 0.8608
+    },
+    "heuristic": {
+      "total_time_sec": 133.6715,
+      "accuracy": 0.3354
+    },
+    "model": {
+      "total_time_sec": 15.1737,
+      "accuracy": 1.0
+    },
+    "oracle": {
+      "total_time_sec": 15.1737,
+      "accuracy": 1.0
+    },
+    "improvement_over_best_static_pct": 0.52
+  }
+}
