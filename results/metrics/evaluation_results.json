@@ -1,245 +1,245 @@
 {
   "LinearRegression": {
-    "training_time_sec": 0.023,
+    "training_time_sec": 0.032,
     "train": {
       "selection": {
-        "selection_accuracy": 0.932,
-        "correct": 685,
-        "total": 735,
-        "total_overhead_sec": 0.297615,
-        "avg_overhead_per_query_sec": 0.000405
+        "selection_accuracy": 0.9583,
+        "correct": 2113,
+        "total": 2205,
+        "total_overhead_sec": 0.175295,
+        "avg_overhead_per_query_sec": 7.9e-05
       },
       "regression_sqlite": {
-        "mae": 0.133988,
-        "rmse": 0.383106,
-        "median_ae": 0.026495,
-        "r2": 0.9644,
-        "mape": 90.73
+        "mae": 0.098458,
+        "rmse": 0.20615,
+        "median_ae": 0.027823,
+        "r2": 0.9687,
+        "mape": 28.3
       },
       "regression_duckdb": {
-        "mae": 0.016093,
-        "rmse": 0.037123,
-        "median_ae": 0.004908,
-        "r2": 0.9475,
-        "mape": 19.75
+        "mae": 0.012862,
+        "rmse": 0.026509,
+        "median_ae": 0.006171,
+        "r2": 0.8961,
+        "mape": 21.71
       }
     },
     "val": {
       "selection": {
-        "selection_accuracy": 0.949,
-        "correct": 149,
-        "total": 157,
-        "total_overhead_sec": 0.026902,
-        "avg_overhead_per_query_sec": 0.000171
+        "selection_accuracy": 0.9746,
+        "correct": 460,
+        "total": 472,
+        "total_overhead_sec": 0.019405,
+        "avg_overhead_per_query_sec": 4.1e-05
       },
       "regression_sqlite": {
-        "mae": 0.106669,
-        "rmse": 0.270512,
-        "median_ae": 0.026421,
-        "r2": 0.9831,
-        "mape": 95.07
+        "mae": 0.10176,
+        "rmse": 0.212832,
+        "median_ae": 0.031007,
+        "r2": 0.973,
+        "mape": 26.83
       },
       "regression_duckdb": {
-        "mae": 0.014753,
-        "rmse": 0.038729,
-        "median_ae": 0.004326,
-        "r2": 0.9541,
-        "mape": 19.02
+        "mae": 0.01381,
+        "rmse": 0.029584,
+        "median_ae": 0.006686,
+        "r2": 0.8865,
+        "mape": 21.86
       }
     }
   },
   "Ridge": {
-    "training_time_sec": 0.012,
+    "training_time_sec": 0.018,
     "train": {
       "selection": {
-        "selection_accuracy": 0.8721,
-        "correct": 641,
-        "total": 735,
-        "total_overhead_sec": 1.846688,
-        "avg_overhead_per_query_sec": 0.002513
+        "selection_accuracy": 0.8449,
+        "correct": 1863,
+        "total": 2205,
+        "total_overhead_sec": 3.924694,
+        "avg_overhead_per_query_sec": 0.00178
       },
       "regression_sqlite": {
-        "mae": 0.256993,
-        "rmse": 0.440919,
-        "median_ae": 0.174451,
-        "r2": 0.9528,
-        "mape": 2261.83
+        "mae": 0.115024,
+        "rmse": 0.210816,
+        "median_ae": 0.050657,
+        "r2": 0.9673,
+        "mape": 392.18
       },
       "regression_duckdb": {
-        "mae": 0.024902,
-        "rmse": 0.041645,
-        "median_ae": 0.01704,
-        "r2": 0.9339,
-        "mape": 134.05
+        "mae": 0.01374,
+        "rmse": 0.026867,
+        "median_ae": 0.007579,
+        "r2": 0.8933,
+        "mape": 39.74
       }
     },
     "val": {
       "selection": {
-        "selection_accuracy": 0.8599,
-        "correct": 135,
-        "total": 157,
-        "total_overhead_sec": 0.555214,
-        "avg_overhead_per_query_sec": 0.003536
+        "selection_accuracy": 0.8538,
+        "correct": 403,
+        "total": 472,
+        "total_overhead_sec": 0.859855,
+        "avg_overhead_per_query_sec": 0.001822
       },
       "regression_sqlite": {
-        "mae": 0.234812,
-        "rmse": 0.328186,
-        "median_ae": 0.172224,
-        "r2": 0.9751,
-        "mape": 2660.17
+        "mae": 0.118177,
+        "rmse": 0.219204,
+        "median_ae": 0.051361,
+        "r2": 0.9714,
+        "mape": 395.49
       },
       "regression_duckdb": {
-        "mae": 0.024395,
-        "rmse": 0.044535,
-        "median_ae": 0.016962,
-        "r2": 0.9393,
-        "mape": 141.42
+        "mae": 0.014871,
+        "rmse": 0.030089,
+        "median_ae": 0.008407,
+        "r2": 0.8826,
+        "mape": 42.3
       }
     }
   },
   "RandomForest": {
-    "training_time_sec": 0.891,
+    "training_time_sec": 1.668,
     "train": {
       "selection": {
-        "selection_accuracy": 0.9932,
-        "correct": 730,
-        "total": 735,
-        "total_overhead_sec": 0.091304,
-        "avg_overhead_per_query_sec": 0.000124
+        "selection_accuracy": 0.9937,
+        "correct": 2191,
+        "total": 2205,
+        "total_overhead_sec": 0.029099,
+        "avg_overhead_per_query_sec": 1.3e-05
       },
       "regression_sqlite": {
-        "mae": 0.124901,
-        "rmse": 0.350083,
-        "median_ae": 0.021386,
-        "r2": 0.9702,
-        "mape": 25.16
+        "mae": 0.09535,
+        "rmse": 0.199023,
+        "median_ae": 0.026385,
+        "r2": 0.9708,
+        "mape": 21.28
       },
       "regression_duckdb": {
-        "mae": 0.01513,
-        "rmse": 0.035151,
-        "median_ae": 0.004075,
-        "r2": 0.9529,
-        "mape": 18.67
+        "mae": 0.012591,
+        "rmse": 0.026091,
+        "median_ae": 0.006118,
+        "r2": 0.8994,
+        "mape": 20.88
       }
     },
     "val": {
       "selection": {
-        "selection_accuracy": 0.9936,
-        "correct": 156,
-        "total": 157,
-        "total_overhead_sec": 0.001231,
-        "avg_overhead_per_query_sec": 8e-06
+        "selection_accuracy": 0.9915,
+        "correct": 468,
+        "total": 472,
+        "total_overhead_sec": 0.007939,
+        "avg_overhead_per_query_sec": 1.7e-05
       },
       "regression_sqlite": {
-        "mae": 0.121075,
-        "rmse": 0.352011,
-        "median_ae": 0.022233,
-        "r2": 0.9713,
-        "mape": 32.4
+        "mae": 0.099435,
+        "rmse": 0.2147,
+        "median_ae": 0.031964,
+        "r2": 0.9725,
+        "mape": 19.88
       },
       "regression_duckdb": {
-        "mae": 0.015564,
-        "rmse": 0.042355,
-        "median_ae": 0.003213,
-        "r2": 0.9451,
-        "mape": 21.16
+        "mae": 0.014114,
+        "rmse": 0.031485,
+        "median_ae": 0.006332,
+        "r2": 0.8715,
+        "mape": 21.53
       }
     }
   },
   "GradientBoosting": {
-    "training_time_sec": 0.836,
+    "training_time_sec": 3.051,
     "train": {
       "selection": {
-        "selection_accuracy": 0.9932,
-        "correct": 730,
-        "total": 735,
-        "total_overhead_sec": 0.091304,
-        "avg_overhead_per_query_sec": 0.000124
+        "selection_accuracy": 0.9941,
+        "correct": 2192,
+        "total": 2205,
+        "total_overhead_sec": 0.026643,
+        "avg_overhead_per_query_sec": 1.2e-05
       },
       "regression_sqlite": {
-        "mae": 0.117671,
-        "rmse": 0.328742,
-        "median_ae": 0.020639,
-        "r2": 0.9738,
-        "mape": 24.93
+        "mae": 0.095061,
+        "rmse": 0.198408,
+        "median_ae": 0.025438,
+        "r2": 0.971,
+        "mape": 21.63
       },
       "regression_duckdb": {
-        "mae": 0.014707,
-        "rmse": 0.034231,
-        "median_ae": 0.004114,
-        "r2": 0.9553,
-        "mape": 18.37
+        "mae": 0.012557,
+        "rmse": 0.026079,
+        "median_ae": 0.00613,
+        "r2": 0.8995,
+        "mape": 20.88
       }
     },
     "val": {
       "selection": {
-        "selection_accuracy": 0.9936,
-        "correct": 156,
-        "total": 157,
-        "total_overhead_sec": 0.001231,
-        "avg_overhead_per_query_sec": 8e-06
+        "selection_accuracy": 0.9915,
+        "correct": 468,
+        "total": 472,
+        "total_overhead_sec": 0.007939,
+        "avg_overhead_per_query_sec": 1.7e-05
       },
       "regression_sqlite": {
-        "mae": 0.129567,
-        "rmse": 0.380517,
-        "median_ae": 0.02022,
-        "r2": 0.9665,
-        "mape": 32.33
+        "mae": 0.100295,
+        "rmse": 0.218011,
+        "median_ae": 0.030252,
+        "r2": 0.9717,
+        "mape": 20.18
       },
       "regression_duckdb": {
-        "mae": 0.015866,
-        "rmse": 0.042849,
-        "median_ae": 0.003129,
-        "r2": 0.9438,
-        "mape": 21.05
+        "mae": 0.014154,
+        "rmse": 0.031559,
+        "median_ae": 0.006438,
+        "r2": 0.8709,
+        "mape": 21.7
       }
     }
   },
   "test": {
     "best_model": "RandomForest",
     "selection": {
-      "selection_accuracy": 1.0,
-      "correct": 158,
-      "total": 158,
-      "total_overhead_sec": 0.0,
-      "avg_overhead_per_query_sec": 0.0
+      "selection_accuracy": 0.9894,
+      "correct": 468,
+      "total": 473,
+      "total_overhead_sec": 0.010906,
+      "avg_overhead_per_query_sec": 2.3e-05
     },
     "regression_sqlite": {
-      "mae": 0.112831,
-      "rmse": 0.369308,
-      "median_ae": 0.019521,
-      "r2": 0.9751,
-      "mape": 28.48
+      "mae": 0.100225,
+      "rmse": 0.234803,
+      "median_ae": 0.026906,
+      "r2": 0.9588,
+      "mape": 23.6
     },
     "regression_duckdb": {
-      "mae": 0.016761,
-      "rmse": 0.039929,
-      "median_ae": 0.004108,
-      "r2": 0.9578,
-      "mape": 19.04
+      "mae": 0.013127,
+      "rmse": 0.027891,
+      "median_ae": 0.005496,
+      "r2": 0.8788,
+      "mape": 22.12
     }
   },
   "baselines": {
     "always_sqlite": {
-      "total_time_sec": 193.93,
-      "accuracy": 0.1392
+      "total_time_sec": 308.3577,
+      "accuracy": 0.1015
     },
     "always_duckdb": {
-      "total_time_sec": 15.2531,
-      "accuracy": 0.8608
+      "total_time_sec": 26.8968,
+      "accuracy": 0.8985
     },
     "heuristic": {
-      "total_time_sec": 133.6715,
-      "accuracy": 0.3354
+      "total_time_sec": 238.0584,
+      "accuracy": 0.3425
     },
     "model": {
-      "total_time_sec": 15.1737,
-      "accuracy": 1.0
+      "total_time_sec": 26.7256,
+      "accuracy": 0.9894
     },
     "oracle": {
-      "total_time_sec": 15.1737,
+      "total_time_sec": 26.7147,
       "accuracy": 1.0
     },
-    "improvement_over_best_static_pct": 0.52
+    "improvement_over_best_static_pct": 0.64
   }
 }

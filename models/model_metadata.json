@@ -31,7 +31,7 @@
     "sqlite",
     "duckdb"
   ],
-  "training_samples": 892,
-  "val_accuracy": 0.9936,
-  "test_accuracy": 1.0
+  "training_samples": 2677,
+  "val_accuracy": 0.9915,
+  "test_accuracy": 0.9894
 }
