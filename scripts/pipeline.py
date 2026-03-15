@@ -35,7 +35,7 @@ duck_con = duckdb.connect("tpch.duckdb")
 
 duck_con.execute("INSTALL tpch;")
 duck_con.execute("LOAD tpch;")
-duck_con.execute("CALL dbgen(sf=0.1);")
+duck_con.execute("CALL dbgen(sf=0.25);")
 
 tables = duck_con.execute("SHOW TABLES;").fetchall()
 print("📦 TPC-H Tables in DuckDB:")
@@ -43,7 +43,7 @@ for t in tables:
     count = duck_con.execute(f"SELECT COUNT(*) FROM {t[0]};").fetchone()[0]
     print(f"   • {t[0]}: {count:,} rows")
 
-print("\n✅ TPC-H data generated in DuckDB (SF=0.1)")
+print("\n✅ TPC-H data generated in DuckDB (SF=0.25)")
 
 # ============================================================
 # CELL 3: Load TPC-H Data into SQLite + Pragmas + Indexes
@@ -744,9 +744,9 @@ print(f"\n✅ Feature extraction engine ready. ({len(test_features)} features)")
 # ============================================================
 import statistics
 
-VARIANTS_PER_QUERY = 50   # 22 × 50 = 1100 queries
-NUM_RUNS = 3              # 3 runs, take median
-TIMEOUT_SEC = 10          # Skip any query taking > 10 seconds
+VARIANTS_PER_QUERY = 150   # 22 × 150 = 3300 queries
+NUM_RUNS = 2              # 3 runs, take median
+TIMEOUT_SEC = 5          # Skip any query taking > 10 seconds
 
 random.seed(42)
 
