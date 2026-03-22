@@ -174,6 +174,31 @@ def run_live_test(sql: str) -> dict:
         actual_best = "sqlite" if sq["time_sec"] <= dk["time_sec"] else "duckdb"
     return {"sqlite": sq, "duckdb": dk, "actual_best": actual_best}
 
+def log_feedback(sql: str, features: dict, actual_sqlite_sec: float, actual_duckdb_sec: float):
+    """Log wrong predictions as new training data."""
+    import uuid
+    feedback_path = os.path.join(PROJECT_ROOT, "data", "feedback_dataset.csv")
+    
+    faster_engine = "sqlite" if actual_sqlite_sec <= actual_duckdb_sec else "duckdb"
+    speedup = actual_sqlite_sec / actual_duckdb_sec if actual_duckdb_sec > 0 else 1.0
+    label = 0 if faster_engine == "sqlite" else 1
+
+    row = {
+        "query_id": f"FB_{uuid.uuid4().hex[:8]}",
+        "variant": 0,
+        "sql": sql,
+        "query_hash": "",
+        "sqlite_time_sec": actual_sqlite_sec,
+        "duckdb_time_sec": actual_duckdb_sec,
+        "speedup_ratio": round(speedup, 6),
+        "faster_engine": faster_engine,
+        **features,   # all 25 feature columns
+        # "label": label,
+    }
+
+    file_exists = os.path.exists(feedback_path)
+    pd.DataFrame([row]).to_csv(feedback_path, mode="a", header=not file_exists, index=False)
+
 # ============================================================
 # Sidebar
 # ============================================================
@@ -507,6 +532,8 @@ if st.session_state.live_result is not None:
                     f"⚠️ Prediction **INCORRECT** — ML predicted **{best_ml.upper()}** "
                     f"but actual winner is **{actual_best.upper()}**"
                 )
+                log_feedback(st.session_state.last_sql, pred["features"], sq["time_sec"], dk["time_sec"])
+                st.caption("📝 Logged for model retraining.")
 
         rows = []
         if sq["time_sec"] is not None:
