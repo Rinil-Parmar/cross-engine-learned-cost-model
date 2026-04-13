@@ -14,7 +14,7 @@ SQL Query → Extract 25 Features → Model predicts SQLite time
                                  → Pick the faster one ✅
 ```
 
-- Generates **1,100+** query variants from all **22 TPC-H** benchmark queries
+- Generates **3,100+** query variants from all **22 TPC-H** benchmark queries
 - Benchmarks each on **SQLite** and **DuckDB**
 - Trains **per-engine regression models** (one for SQLite, one for DuckDB)
 - Routes new queries to the predicted faster engine — **zero-shot, no execution needed**
@@ -82,7 +82,7 @@ cd scripts
 python pipeline.py
 ```
 
-Generates TPC-H data (SF=0.5), benchmarks 1,100+ queries on both engines, extracts features, saves train/val/test splits.
+Generates TPC-H data (SF=0.5), benchmarks 3,100+ queries on both engines, extracts features, saves train/val/test splits.
 
 
 ### Step 2: Train Models
